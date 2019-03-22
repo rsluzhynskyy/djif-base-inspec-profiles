@@ -1,0 +1,21 @@
+name: djif-base-inspec
+title: DJIF Base Integration Tests
+maintainer: Nico Halpern
+copyright: Nico Halpern
+copyright_email: nico.halpern@dowjones.com
+license: All Rights Reserved
+summary: Base golden image InSpec
+version: 0.0.6
+supports:
+  - os-family: redhat
+  - os-family: amazon
+depends:
+  - name: dj-linux-baseline
+    git: https://github.com/dev-sec/linux-baseline
+
+    # Previously it was pinned to 28ea02be65df2474a876016bb1b4418ec490163a
+    # to avoid regression introduced in 115e654 (undefined user method)
+    # Laster verified commit: 7ab63c8a3c72b45c0a492d1497065be91c0e53b4
+  - name: cis-dil-benchmark
+    git: https://github.com/dev-sec/cis-dil-benchmark
+    tag: '0.2.0'

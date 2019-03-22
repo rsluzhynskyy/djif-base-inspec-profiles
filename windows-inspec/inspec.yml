@@ -1,0 +1,23 @@
+name: djif-base-inspec-windows
+title: DJIF Base Integration Tests for Windows
+maintainer: Nico Halpern
+copyright: Nico Halpern
+copyright_email: nico.halpern@dowjones.com
+license: All Rights Reserved
+summary: Base golden image InSpec
+version: 0.0.1
+supports:
+  - os-family: windows
+depends:
+  # - name: windows-baseline
+  #   git: https://github.com/dev-sec/windows-baseline.git
+  # - name: cis-windows2012r2-level1-memberserver
+  #   git: git@github.dowjones.net:infrasec-automation/cis-windows2012r2-level1-memberserver.git
+  # - name: cis-windows2016rtm-release1607-level1-memberserver
+  #   git: git@github.dowjones.net:infrasec-automation/cis-windows2016rtm-level1-memberserver.git
+  - name: windows-baseline
+    compliance: admin/windows-baseline
+  - name: cis-windows2012r2-level1-memberserver
+    compliance: admin/cis-windows2012r2-level1-memberserver
+  - name: cis-windows2016rtm-release1607-level1-memberserver
+    compliance: admin/cis-windows2016rtm-release1607-level1-memberserver
